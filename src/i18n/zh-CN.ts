@@ -4,7 +4,7 @@ export default {
     star: 'GitHub 赞一个',
   },
   home: {
-    description: '为你的博客创建封面图片现在变得非常容易',
+    description: '现在为你的博客生成封面图，轻松又快捷',
     goEditor: '立即开始',
     whyCoverImages: '为什么封面图片比你想象的更重要？',
     reason1: '每天约有 <b>700 万篇</b> 博文被发表。随着新时代博客工具的兴起，这个数字还会持续上升。',
