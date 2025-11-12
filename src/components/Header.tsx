@@ -11,25 +11,18 @@ function Header() {
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-indigo-50/80 text-xl px-4 py-2 flex border-b border-indigo-100 w-full">
       <Link className="flex items-center" to="/" onClick={scrollToTop}>
         <img alt="logo" className="w-8 h-8 mx-2" src={logo} />
-        {/* 修改左上角文字 */}
         <h1 className="font-semibold">野猪佩奇弟弟の封面工具</h1>
       </Link>
 
       <div className="flex items-center md:gap-4 gap-2 ml-auto md:mr-4">
-        {/* GitHub 星星按钮保留 */}
         <a
           className="bg-gray-700 hover:bg-gray-800 px-4 rounded-full p-1 text-white md:text-sm flex items-center text-xs font-Nunito"
-          href="https://github.com/RunWang925/coverview-zh"
+          href="https://github.com/Lruihao/CoverView"
           rel="noreferrer"
           target="_blank"
         >
-          <span className="text-sm">
-            ⭐
-            {' '}
-            {t('common.star')}
-          </span>
+          <span className="text-sm">⭐ {t('common.star')}</span>
         </a>
-        {/* 已移除 Twitter 分享按钮 */}
         <SwitchLang />
       </div>
     </header>
