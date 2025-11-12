@@ -13,7 +13,7 @@ function Header() {
       </div>
       <a
         className="hover:translate-x-2 duration-300 md:px-4 md:text-sm text-xs ml-auto mr-2 md:mr-4 font-Nunito font-semibold p-2"
-        href="https://github.com/Lruihao/CoverView"
+        href="https://github.com/RunWang925/coverview-zh"
         rel="noreferrer"
         target="_blank"
       >
