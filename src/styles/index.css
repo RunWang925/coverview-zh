@@ -8,9 +8,9 @@
 @import 'tailwindcss';
 @config '../../tailwind.config.mjs';
 
-/* 新增全局背景色，与页面其他区域保持一致 */
+/* 新增全局背景色，与页面头部的 bg-indigo-50/80 完全一致 */
 body {
-  background-color: #e6ebf5; /* 示例颜色，可根据实际页面主色调调整 */
+  @apply bg-indigo-50/80;
   margin: 0;
   padding: 0;
 }
