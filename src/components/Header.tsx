@@ -6,6 +6,7 @@ import SwitchLang from './SwitchLang'
 
 function Header() {
   const { t } = useTranslation()
+  const tweetText = encodeURIComponent(t('home.tweetText'))
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-indigo-50/80 text-xl px-4 py-2 flex border-b border-indigo-100 w-full">
@@ -21,7 +22,19 @@ function Header() {
           rel="noreferrer"
           target="_blank"
         >
-          <span className="text-sm">⭐ {t('common.star')}</span>
+          <span className="text-sm">
+            ⭐
+            {' '}
+            {t('common.star')}
+          </span>
+        </a>
+        <a
+          href={`https://x.com/intent/tweet?text=${tweetText}`}
+          className="bg-blue-400 hover:bg-blue-500 md:text-sm text-xs rounded-full px-4 font-semibold text-white p-1 hidden md:inline"
+          rel="noreferrer"
+          target="_blank"
+        >
+          {t('home.shareOnTwitter')}
         </a>
         <SwitchLang />
       </div>
