@@ -22,15 +22,12 @@ function Header() {
           rel="noreferrer"
           target="_blank"
         >
-          <span className="text-sm">
-            ⭐
-            {' '}
-            {t('common.star')}
-          </span>
+          <span className="text-sm">⭐ {t('common.star')}</span>
         </a>
+        {/* 隐藏 Twitter 分享按钮：在原有 className 后添加 hidden（永久隐藏） */}
         <a
           href={`https://x.com/intent/tweet?text=${tweetText}`}
-          className="bg-blue-400 hover:bg-blue-500 md:text-sm text-xs rounded-full px-4 font-semibold text-white p-1 hidden md:inline"
+          className="hidden bg-blue-400 hover:bg-blue-500 md:text-sm text-xs rounded-full px-4 font-semibold text-white p-1 md:inline"
           rel="noreferrer"
           target="_blank"
         >
