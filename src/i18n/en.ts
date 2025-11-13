@@ -5,6 +5,7 @@ export default {
   },
   home: {
     description: 'Generate cover images for your blog easily and quickly',
+    descriptionSub: 'In just a few simple steps, you can generate a cover image suitable for your blog, supporting multiple platforms. Give it a try now!', // 新增的小字说明
     goEditor: 'Create Now',
     whyCoverImages: 'Why cover images are more important than you think?',
     reason1: 'Around <b>7 million</b> blog posts are published daily. And with the rise of new-age blogging tools, it will only go up.',
