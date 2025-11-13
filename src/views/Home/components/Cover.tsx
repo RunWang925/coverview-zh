@@ -32,6 +32,7 @@ function CoverSection() {
           >
             {t('home.blogBtn')} →
           </a>
+        </div>
       </div>
       <div className="temple flex flex-row items-center justify-center mx-auto md:w-10/12 py-10">
         <div className="m-4 transform -translate-y-20 border border-gray-200 animate hover:scale-105 hover:-rotate-3 rotate-6 duration-100 bg-white p-2 shadow-xs w-1/5 rounded-lg flex flex-col">
