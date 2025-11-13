@@ -11,6 +11,7 @@ function CoverSection() {
     <div className="bg-indigo-50/80">
       <div className="mx-auto md:px-20 py-6 flex flex-col items-center">
         <h1 className="md:w-7/12 m-10 text-center md:text-5xl text-3xl font-extrabold text-gray-700 font-Anek">{t('home.description')}</h1>
+        <p className="text-sm text-gray-500 text-center"> {t('home.descriptionSub')}</p>
         <Link className="hover:translate-x-2 duration-300 bg-gray-700 hover:bg-gray-800 group rounded-full px-4 md:px-8 text-white md:text-2xl text-lg mx-auto font-Inter font-semibold md:p-4 p-2" to="/editor">
           <span className="md:text-2xl text-lg">
             {t('home.goEditor')}
