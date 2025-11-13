@@ -13,7 +13,7 @@ function Home() {
             href="https://hexo.814925.xyz"
             target="_blank"
             rel="noreferrer"
-            className="text-gray-600 hover:text-indigo-800 text-sm mb-2 md:mb-0 flex items-center"
+            className="text-gray-600 hover:text-indigo-800 text-sm mb-2 md:mb-0"
           >
             © {new Date().getFullYear()} 野猪佩奇弟弟
           </a>
@@ -21,7 +21,7 @@ function Home() {
             href="https://hexo.814925.xyz"
             target="_blank"
             rel="noreferrer"
-            className="text-indigo-600 hover:text-indigo-800 text-sm font-medium"
+            className="text-gray-600 hover:text-indigo-800 text-sm"
           >
             关于本站
           </a>
