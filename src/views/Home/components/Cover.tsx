@@ -6,7 +6,8 @@ import cover3 from '@/assets/images/cover3.webp'
 
 function CoverSection() {
   const { t } = useTranslation()
-
+  const blogUrl = '你的博客链接';
+  
   return (
     <div className="bg-indigo-50/80">
       <div className="mx-auto md:px-20 py-6 flex flex-col items-center">
