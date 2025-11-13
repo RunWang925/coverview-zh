@@ -4,7 +4,7 @@ export default {
     star: 'Star on GitHub',
   },
   home: {
-    description: 'Creating cover images for your blogs is now super easy',
+    description: 'Generate cover images for your blog easily and quickly',
     goEditor: 'Create Now',
     whyCoverImages: 'Why cover images are more important than you think?',
     reason1: 'Around <b>7 million</b> blog posts are published daily. And with the rise of new-age blogging tools, it will only go up.',
