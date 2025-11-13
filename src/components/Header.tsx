@@ -3,6 +3,8 @@ import { Link } from 'react-router'
 import logo from '@/assets/images/logo.png'
 import { scrollToTop } from '@/common/utils'
 import SwitchLang from './SwitchLang'
+// 引入根目录的配置文件
+import config from '@/../config'
 
 function Header() {
   const { t } = useTranslation()
@@ -11,13 +13,13 @@ function Header() {
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-indigo-50/80 text-xl px-4 py-2 flex border-b border-indigo-100 w-full">
       <Link className="flex items-center" to="/" onClick={scrollToTop}>
         <img alt="logo" className="w-8 h-8 mx-2" src={logo} />
-        <h1 className="font-semibold">野猪佩奇弟弟の封面工具</h1>
+        <h1 className="font-semibold">{config.headerTitle}</h1>
       </Link>
 
       <div className="flex items-center md:gap-4 gap-2 ml-auto md:mr-4">
         <a
           className="bg-gray-700 hover:bg-gray-800 px-4 rounded-full p-1 text-white md:text-sm flex items-center text-xs font-Nunito"
-          href="https://github.com/RunWang925/coverview-zh"
+          href={config.githubRepoUrl}
           rel="noreferrer"
           target="_blank"
         >

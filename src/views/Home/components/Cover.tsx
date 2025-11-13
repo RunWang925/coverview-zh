@@ -1,11 +1,11 @@
-import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router'
-import cover1 from '@/assets/images/cover1.webp'
-import cover2 from '@/assets/images/cover2.webp'
-import cover3 from '@/assets/images/cover3.webp'
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router';
+import config from '@/../config'; // 引入config.ts
 
 function CoverSection() {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
+  // 从config中解构图片路径
+  const { cover1, cover2, cover3 } = config.exampleCoverImages;
 
   return (
     <div className="bg-indigo-50/80">

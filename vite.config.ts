@@ -4,22 +4,22 @@ import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react-swc'
 import { defineConfig, loadEnv } from 'vite'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import config from './config' // 导入根目录配置
 
 export default defineConfig(({ mode }) => {
-  // 加载 .env 中以 REACT_APP_ 为前缀的变量
   const envFromFile = loadEnv(mode, process.cwd(), 'REACT_APP_')
-  
-  // 合并：系统环境变量优先级高于 .env 文件
   const finalEnv = { ...envFromFile, ...process.env }
 
   return {
     define: {
+      // Unsplash 密钥（保留原有逻辑）
       'import.meta.env.REACT_APP_UNSPLASH_ACCESS_KEY': JSON.stringify(
         finalEnv.REACT_APP_UNSPLASH_ACCESS_KEY
       ),
-      'import.meta.env.REACT_APP_AUTHOR': JSON.stringify(
-        finalEnv.REACT_APP_AUTHOR
-      ),
+      // 作者名称（关联 config.ts）
+      'import.meta.env.REACT_APP_AUTHOR': JSON.stringify(config.appAuthor),
+      // 新增：浏览器标题注入（关键补充，用于 index.html）
+      'import.meta.env.VITE_BROWSER_TITLE': JSON.stringify(config.browserTitle),
     },
     plugins: [
       react(),

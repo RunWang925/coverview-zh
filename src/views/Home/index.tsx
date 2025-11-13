@@ -1,5 +1,6 @@
 import Cover from './components/Cover'
 import Header from './components/Header'
+import config from '@/../config'
 
 function Home() {
   return (
@@ -10,20 +11,20 @@ function Home() {
       <footer className="mt-auto bg-indigo-50/80 py-4 border-t border-indigo-200">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
           <a
-            href="https://hexo.814925.xyz"
+            href={config.ownerUrl}
             target="_blank"
             rel="noreferrer"
             className="text-gray-600 hover:text-indigo-800 text-sm mb-2 md:mb-0"
           >
-            © {new Date().getFullYear()} 野猪佩奇弟弟
+            © {new Date().getFullYear()} {config.copyrightOwner}
           </a>
           <a
-            href="https://hexo.814925.xyz"
+            href={config.aboutSiteUrl} 
             target="_blank"
             rel="noreferrer"
             className="text-gray-600 hover:text-indigo-800 text-sm"
           >
-            关于本站
+            {config.aboutSiteText}
           </a>
         </div>
       </footer>

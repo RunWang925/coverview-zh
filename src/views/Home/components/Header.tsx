@@ -1,6 +1,8 @@
 import { useTranslation } from 'react-i18next'
 import logo from '@/assets/images/logo.png'
 import SwitchLang from '@/components/SwitchLang'
+// 引入根目录配置文件
+import config from '@/../config'
 
 function Header() {
   const { t } = useTranslation()
@@ -9,11 +11,11 @@ function Header() {
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-indigo-50/80 text-xl flex border-b border-indigo-50 p-2 w-full md:px-32">
       <div className="flex items-center">
         <img alt="logo" className="w-8 h-8 mx-2" src={logo} />
-        <h1 className="font-semibold md:text-xl text-lg font-Inter">野猪佩奇弟弟の封面生成</h1>
+        <h1 className="font-semibold md:text-xl text-lg font-Inter">{config.headerTitle}</h1>
       </div>
       <a
         className="hover:translate-x-2 duration-300 md:px-4 md:text-sm text-xs ml-auto mr-2 md:mr-4 font-Nunito font-semibold p-2"
-        href="https://github.com/RunWang925/coverview-zh"
+        href={config.githubRepoUrl}
         rel="noreferrer"
         target="_blank"
       >

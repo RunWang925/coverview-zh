@@ -1,92 +1,96 @@
 # CoverView
 
-👉 简体中文说明 | [English README](README.en.md)
+👉 封面生成说明 |
 
-[![用爱发电](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/Lruihao/CoverView)
 
-> 该项目基于原始的 [CoverView](https://github.com/rutikwankhade/CoverView)。
+该项目基于 [Lruihao/CoverView](https://github.com/Lruihao/CoverView) 汉化版开发，其设计风格（高斯模糊背景 + 漂浮文字+自定义上传图片）非常契合博客场景。借助 Unsplash API，可直接搜索海量无版权摄影作品，极大提升了找图效率。该项目基于原始的 [CoverView](https://github.com/rutikwankhade/CoverView) 
+
+
+
 
 现在为你的博客创建封面图片变得非常简单。
 
-![cover_169570](https://github.com/user-attachments/assets/8032fecb-4ae4-45b9-9af7-dbed801651d1)
+![首页](assets\images\首页.png) 
+![页面](assets\images\页面.png) 
 
-## 💥 变更通知
+*示例：部署CoverView后效果*
 
-自 2024 年 03 月 28 日起，已将原始的 CoverView 复刻到我的存储库，并进行了以下更改和增强：
 
-- 修复了具有图案背景的图像无法下载的问题
-- 修复了无法下载和上传 SVG 格式图标的问题
-- 修复了移动端样式混乱的问题
-- 修复了 `重置所有` 按钮功能异常的问题
-- 添加了 ESLint 支持
-- 添加了 I18n 支持
-- 增强了 Unsplash 图像搜索功能
-- 添加了下载图像格式选择（PNG/JPEG/SVG/Blob），并支持 JPEG 图像质量调整
-- 优化了图像下载速度
-- 优化 Devicons 以多色 SVG 图标显示
-- 添加了更多字体和平台支持
-- 统一了不同主题下下载图像的尺寸
-- 等等...
+## ✨ 功能优化
 
-## ⚡ 特性
+在原项目基础上，本分支主要做了以下调整：
+1. 精简首页结构，移除冗余页面，聚焦核心功能
+2. 底部新增版权信息与"关于本站"入口，支持自定义跳转链接
+3. 实现配置集中化管理：所有可自定义的文字（标题、版权信息等）和链接均统一维护在 `config.ts` 中，修改无需改动业务代码
 
-- 🚀 超快速且易于使用
-- 🌈 7 种不同主题，多种字体
-- 🌠 100+ 开发图标，并提供上传自定义图标选项
-- ✨ 15+ 种不同背景图案
-- 💾 基于博客平台或常用尺寸的封面大小
-  - [Hashnode](https://hashnode.com/)
-  - [Dev.to](https://dev.to/)
-  - [Hugo FixIt](https://github.com/hugo-fixit/FixIt)
-  - [稀土掘金](https://juejin.cn/)
 
-## 👩‍💻 开发
+## 🔧 配置说明
 
-本项目主要使用以下技术栈：
+所有可自定义内容均在根目录 `config.ts` 中维护，主要包括：
+- 页面标题、头部文字等展示文本
+- 底部版权所有者、跳转链接
+- "关于本站"文字及链接
+- GitHub仓库地址等
+![config](assets\images\config.png) 
 
-- [React 19](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Vite](https://vite.dev/)
+示例配置片段：
+```typescript
+// config.ts 关键配置示例
+export default {
+  headerTitle: "自定义封面生成",       // 头部标题
+  copyrightOwner: "你的名称",          // 版权所有者
+  ownerUrl: "https://你的网站",        // 所有者链接
+  githubRepoUrl: "https://你的仓库地址" // 项目仓库链接
+  // 更多配置详见文件
+};
+```
 
-1. 下载项目并安装依赖：
 
-    ```shell
-    git clone https://github.com/Lruihao/CoverView.git
-    cd CoverView/
-    pnpm i
-    ```
+## 📦 API 说明
 
-2. 从 [Unsplash API](https://unsplash.com/developers) 获取访问密钥。
-3. 在 `.env.local` 文件中添加 `REACT_APP_UNSPLASH_ACCESS_KEY` 环境变量。
+项目依赖 Unsplash API 提供图片资源，使用前需注意：
 
-    ```shell
-    # https://unsplash.com/ Access Key
-    REACT_APP_UNSPLASH_ACCESS_KEY="your_access_key_here"
-    ```
+1. 需在环境变量中配置 `REACT_APP_UNSPLASH_ACCESS_KEY`（支持通过 `.env` 或系统环境变量设置）
+2. API 调用限制：Unsplash 免费计划默认**每小时最多 50 次请求**，超过限制会导致图片加载失败
+3. 若无需图片功能或遇到限制，可在代码中注释相关调用逻辑
 
-4. 运行以下命令开始项目：
+## 🚀 部署方式
 
-    ```shell
-    pnpm dev
-    ```
+支持多种现代化部署平台：
 
-## 👇 贡献
+- Vercel
+- Cloudflare Pages
+- EdgeOne Pages
+- 其他支持静态站点部署的平台
 
-欢迎提交拉取请求。对于重大更改，请先打开一个问题来讨论你想要更改的内容。
 
-1. 克隆它 (<https://github.com/Lruihao/CoverView/fork>)
-2. 创建你的功能分支 (`git checkout -b feature/fooBar`)
-3. 提交你的更改 (`git commit -am 'Add some fooBar'`)
-4. 推送到分支 (`git push origin feature/fooBar`)
-5. 创建一个新的拉取请求
+## 🔑 API 配置（必看）
 
-## 🙏 致谢
+项目依赖 Unsplash API 实现图片搜索功能，需先配置环境变量：
 
-- [Rutik Wankhade](https://github.com/rutikwankhade)（原始 CoverView）
-- [dom-to-image-more](https://github.com/1904labs/dom-to-image-more)
-- [Hero Patterns](https://www.heropatterns.com/)
-- [Devicons](https://github.com/devicons/devicon)
-- [Font Virgil](https://github.com/excalidraw/virgil)
-- [Font MMT](https://github.com/Lruihao/mmt-webfont)
+1. **获取 API 密钥**
 
-如果你觉得这个项目有用，请别忘了留下一个 ⭐。
+   访问 [Unsplash Developers](https://unsplash.com/developers)，按以下步骤操作：
+
+   - 右上角注册账号并登录
+   - 点击「New Application」创建应用
+   - 进入应用详情页，获取 `Access Key` 
+
+2. **配置环境变量**
+
+   部署时需填入以下环境变量：
+
+   - `REACT_APP_UNSPLASH_ACCESS_KEY`：对应 Unsplash 的 `Access Key`
+
+     
+
+## 🌟 项目价值与致谢
+
+感谢以下贡献者：
+
+- [Rutik Wankhade](https://github.com/rutikwankhade)（原始 CoverView 项目）
+- [Lruihao](https://github.com/Lruihao)（CoverView 汉化版本）
+- [willow-god](https://github.com/willow-god)（~~抄~~参清羽飞扬版本的优化思路）
+- Unsplash 社区的摄影师们（提供无版权优质图片资源）
+
+如果你觉得这个项目有用，请别忘了留下一个 ⭐！

@@ -7,9 +7,11 @@ import theme4 from '@/assets/images/theme4.webp'
 import theme5 from '@/assets/images/theme5.webp'
 import theme6 from '@/assets/images/theme6.webp'
 import theme7 from '@/assets/images/theme7.webp'
+// 修正根目录 config.ts 的引入
+import config from '@/../config'
 
 export const defaultSettings: ThemeConfig = {
-  title: '野猪佩奇弟弟的文章标题',
+  title: config.defaultTitle,
   bgColor: '#949ee5',
   pattern: '',
   author: import.meta.env.REACT_APP_AUTHOR || 'Lruihao',
