@@ -13,7 +13,7 @@ function Home() {
             © {new Date().getFullYear()} 野猪佩奇弟弟
           </p>
           <a
-            href="https://hexo.814925.xyz"#这里修改跳转关于本站连接 我这里跳转文章说明
+            href="https://hexo.814925.xyz"
             target="_blank"
             rel="noreferrer"
             className="text-indigo-600 hover:text-indigo-800 text-sm font-medium"
