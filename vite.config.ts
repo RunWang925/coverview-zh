@@ -5,13 +5,21 @@ import react from '@vitejs/plugin-react-swc'
 import { defineConfig, loadEnv } from 'vite'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
-// https://vite.dev/config/
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), '')
+  // 加载 .env 中以 REACT_APP_ 为前缀的变量
+  const envFromFile = loadEnv(mode, process.cwd(), 'REACT_APP_')
+  
+  // 合并：系统环境变量优先级高于 .env 文件
+  const finalEnv = { ...envFromFile, ...process.env }
+
   return {
     define: {
-      'import.meta.env.REACT_APP_UNSPLASH_ACCESS_KEY': JSON.stringify(env.REACT_APP_UNSPLASH_ACCESS_KEY),
-      'import.meta.env.REACT_APP_AUTHOR': JSON.stringify(env.REACT_APP_AUTHOR),
+      'import.meta.env.REACT_APP_UNSPLASH_ACCESS_KEY': JSON.stringify(
+        finalEnv.REACT_APP_UNSPLASH_ACCESS_KEY
+      ),
+      'import.meta.env.REACT_APP_AUTHOR': JSON.stringify(
+        finalEnv.REACT_APP_AUTHOR
+      ),
     },
     plugins: [
       react(),
