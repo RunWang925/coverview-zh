@@ -10,8 +10,8 @@
 
 现在为你的博客创建封面图片变得非常简单。
 
-![首页](assets\images\首页.png) 
-![页面](assets\images\页面.png) 
+![首页](https://github.com/RunWang925/coverview-zh/blob/master/assets/images/首页.png) 
+![页面](https://github.com/RunWang925/coverview-zh/blob/master/assets/images/页面.png) 
 
 *示例：部署CoverView后效果*
 
@@ -31,7 +31,7 @@
 - 底部版权所有者、跳转链接
 - "关于本站"文字及链接
 - GitHub仓库地址等
-![config](assets\images\config.png) 
+![config](https://github.com/RunWang925/coverview-zh/blob/master/assets/images/config.png) 
 
 示例配置片段：
 ```typescript

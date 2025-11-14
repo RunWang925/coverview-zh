@@ -18,11 +18,11 @@ export default {
   browserTitle: "封面生成-野猪佩奇弟弟专用封面生成工具",
   // 项目的作者名称（用于环境变量和页面相关作者信息展示）
   appAuthor: "Peggy Bro Blog",
-  // 首页三张示例图片
+  // 首页三张示例图片自己替换
   exampleCoverImages: {
-    cover1: "/src/assets/images/cover1.webp", //觉得修改目录图片麻烦可以直接填入图片链接
-    cover2: "/src/assets/images/cover2.webp", // https://img.zoerun.qzz.io/123.png
-    cover3: "/src/assets/images/cover3.webp"
+    cover1: "https://i.p-i.vip/133/20251114-6916e23b6f810.webp", 
+    cover2: "https://i.p-i.vip/133/20251114-6916e23b3b721.webp", 
+    cover3: "https://i.p-i.vip/133/20251114-6916e22acf8e5.webp"
   }
 
 };
