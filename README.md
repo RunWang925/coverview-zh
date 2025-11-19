@@ -82,7 +82,46 @@ export default {
 
    - `REACT_APP_UNSPLASH_ACCESS_KEY`：对应 Unsplash 的 `Access Key`
 
-     
+## 修改和上传
+1. **仓库拉取下载本地**
+
+   将远程仓库 https://github.com/RunWang925/coverview-zh 拉取到本地，完整 Git 命令是：
+   ```
+   git clone https://github.com/RunWang925/coverview-zh.git #库地址替换自己地址
+   ```
+   通常情况下，从 GitHub 克隆前端项目后，本地预览的步骤如下（假设项目使用 npm 管理依赖）：
+   首先进入项目目录：
+
+   ```
+   cd coverview-zh  # 进入克隆下来的项目文件夹
+   ```
+   安装依赖（首次拉取项目必须执行，确保依赖完整）：
+   ```
+   npm install #更新依赖
+   ```
+   启动本地预览服务
+   ```
+   npm run dev #本地预览http://localhost:5173
+   ```
+2. **修改后上传**
+
+   查看修改状态（可选，但推荐，确认修改内容）：
+   ```
+   git status # 会显示哪些文件被修改、新增或删除。
+   ```
+  
+   将修改添加到暂存区：
+   ```
+   git add .  #添加所有修改（包括新增、修改、删除的文件）：
+   ```
+   提交暂存区的修改到本地仓库：
+   ```
+   git commit -m "说明描述" #例如：修复了XXbug / 添加了XX功能
+   ```
+   推送到远程仓库：
+   ```
+   git push origin master # 默认分支是 master（旧版本 GitHub 常用）新版 main
+   ```
 
 ## 🌟 项目价值与致谢
 

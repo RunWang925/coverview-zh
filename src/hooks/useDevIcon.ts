@@ -5,7 +5,8 @@ import useSWR from 'swr'
 import { fetcher } from '@/common/utils'
 import { useLocalStorage } from './useLocalStorage'
 
-const API_URL = 'https://raw.githubusercontent.com/devicons/devicon/master/devicon.json'
+const API_URL = 'https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.json'
+// jsDelivr CDN修改地址为CDN加速地址
 
 interface DevIconItem {
   name: string
