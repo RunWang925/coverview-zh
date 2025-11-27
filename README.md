@@ -115,13 +115,33 @@ export default {
    git add .  #添加所有修改（包括新增、修改、删除的文件）：
    ```
    提交暂存区的修改到本地仓库：
+
    ```
    git commit -m "说明描述" #例如：修复了XXbug / 添加了XX功能
+   ```
+   创建版本标签
+   ```
+   git tag -a v0.0.1 -m "v0.0.1: 初始化coverview-zh项目"
+   ```
+   推送标签到远程仓库
+   ```
+   git push origin v0.0.1
    ```
    推送到远程仓库：
    ```
    git push origin master # 默认分支是 master（旧版本 GitHub 常用）新版 main
    ```
+
+   # 暂存修改
+git add .
+# 提交本地修改（备注清晰说明版本内容）
+git commit -m "v0.0.1: 初始化coverview-zh项目"
+# 创建版本标签
+git tag -a v0.0.1 -m "v0.0.1: 初始化coverview-zh项目"
+# 推送标签到远程仓库
+git push origin v0.0.1
+# 推送代码到远程master分支
+git push origin master
 
 ## ⚡CDN赞助
 

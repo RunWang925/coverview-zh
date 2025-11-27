@@ -6,7 +6,7 @@ import { fetcher } from '@/common/utils'
 import { useLocalStorage } from './useLocalStorage'
 
 const API_URL = 'https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.json'
-// jsDelivr CDN修改地址为CDN加速地址
+// 清华大学开源软件镜像站CDN加速地址
 
 interface DevIconItem {
   name: string
