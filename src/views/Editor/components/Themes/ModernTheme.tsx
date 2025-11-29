@@ -21,7 +21,7 @@ function ModernTheme({ config }: ThemeProps) {
             alt={`${icon.label} Icon`}
             className="w-32 h-32 rounded-full bg-white border-8 border-white"
             data-icon={icon.value}
-            src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon.value}/${icon.value}-${icon.opts[0]}.svg`}
+            src={`https://gcore.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon.value}/${icon.value}-${icon.opts[0]}.svg`}
           />
         )}
       </div>

@@ -5,8 +5,8 @@ import useSWR from 'swr'
 import { fetcher } from '@/common/utils'
 import { useLocalStorage } from './useLocalStorage'
 
-const API_URL = 'https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.json'
-// 清华大学开源软件镜像站CDN加速地址
+const API_URL = 'https://gcore.jsdelivr.net/gh/devicons/devicon@master/devicon.json'
+//  Gcore 镜像，国内节点覆盖广
 
 interface DevIconItem {
   name: string

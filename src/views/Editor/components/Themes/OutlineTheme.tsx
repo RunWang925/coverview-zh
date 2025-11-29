@@ -30,7 +30,7 @@ function OutlineTheme({ config }: ThemeProps) {
               alt={`${icon.label} Icon`}
               className="rounded-full object-cover w-24 h-24 bg-white p-1 border-2 border-white"
               data-icon={icon.value}
-              src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon.value}/${icon.value}-${icon.opts[0]}.svg`}
+              src={`https://gcore.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon.value}/${icon.value}-${icon.opts[0]}.svg`}
             />
           </div>
         )}

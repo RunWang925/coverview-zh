@@ -198,7 +198,7 @@ function formatOptionLabel({ value, label, opts }: ThemeIcon) {
             className="w-6 h-6"
             src={value === 'hugo-fixit'
               ? fixitIcon
-              : `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${value}/${value}-${opts[0]}.svg`}
+              : `https://gcore.jsdelivr.net/gh/devicons/devicon@latest/icons/${value}/${value}-${opts[0]}.svg`}
           />
         )}
       </div>

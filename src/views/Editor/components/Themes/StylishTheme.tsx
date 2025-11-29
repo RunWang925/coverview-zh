@@ -184,7 +184,7 @@ function StylishTheme({ config }: ThemeProps) {
                   alt={`${icon.label} Icon`}
                   className="w-8 h-8 mr-2"
                   data-icon={icon.value}
-                  src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon.value}/${icon.value}-${icon.opts[0]}.svg`}
+                  src={`https://gcore.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon.value}/${icon.value}-${icon.opts[0]}.svg`}
                 />
               )}
 
